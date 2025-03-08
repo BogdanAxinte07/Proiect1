@@ -1,0 +1,95 @@
+/* Stil de bază pentru navbar */
+.Header .nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.9) !important;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Logo-ul */
+.Header .nav img {
+  height: 50px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.Header .nav img:hover {
+  transform: scale(1.05);
+}
+
+/* Meniu desktop */
+.Header .custom-dropdown-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.Header .custom-dropdown-menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 10px 15px;
+  transition: color 0.3s ease-in-out;
+}
+
+.Header .custom-dropdown-menu a:hover {
+  color: var(--text-secondary);
+}
+
+/* Meniu mobil */
+.Header .menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Meniu mobil inițial ascuns */
+.Header .mobile-menu {
+  display: none;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  text-align: center;
+  padding: 20px 0;
+  flex-direction: column;
+  gap: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Când meniul este activ */
+.Header .mobile-menu.active {
+  display: flex;
+  transform: translateY(0);
+}
+
+/* Link-uri din meniul mobil */
+.Header .mobile-menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.Header .mobile-menu a:hover {
+  color: var(--text-secondary);
+}
+
+/* Media Queries pentru ecrane mici */
+@media (max-width: 768px) {
+  .Header .custom-dropdown-menu {
+      display: none; /* Ascunde meniul desktop */
+  }
+
+  .Header .menu-icon {
+      display: block; /* Afișează butonul pentru meniu mobil */
+  }
+}

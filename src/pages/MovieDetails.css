@@ -1,0 +1,73 @@
+/* Stil de bază pentru pagina detaliilor filmului */
+.MovieDetails {
+  text-align: left;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Stil pentru imaginea filmului */
+.MovieDetails img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+}
+
+/* Stil pentru titlurile filmului */
+.MovieDetails h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+
+.MovieDetails p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* Buton pentru adăugare la favorite */
+.MovieDetails button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.MovieDetails button:hover {
+  background-color: var(--primary-dark);
+}
+
+/* Responsive styling pentru trailere YouTube */
+.MovieDetails iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsivitate pentru ecrane mici */
+@media (max-width: 768px) {
+  .MovieDetails {
+      padding: 15px;
+  }
+
+  .MovieDetails h1 {
+      font-size: 1.8rem;
+  }
+
+  .MovieDetails p {
+      font-size: 1rem;
+  }
+
+  .MovieDetails img {
+      max-width: 100%;
+  }
+}
